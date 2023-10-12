@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class ="container">
+  <h3>Please register your Account:</h3>
+</div>
+<div class = "container1">
+  <form action="{{ url_for('register') }}" method="post" class="form-1">
+  <div class = "form-input">
+    <label for="username">Account name:</label>
+    <input type="text" name="Account_name" placeholder="Enter Name" id="Account_name" required>
+  </div>
+  <div class = "form-input">
+    <label for="username">Phone no:</label>
+    <input type="text" name="Phone_no" placeholder="Enter Phone Number" id="Phone_no" required>
+  </div>
+  <div class = "form-input">
+    <label for="username">Address:</label>
+    <input type="text" name="Address" placeholder="Enter Address" id="Address" required>
+  </div>
+  <div class = "form-input">
+    <label for="username">Date Of Birth:</label>
+    <input type="text" name="DOB" placeholder="Enter DOB" id="DOB" required>
+  </div><div class = "form-input">
+    <label for="username">Aadhaar no:</label>
+    <input type="text" name="Aadhaar_no" placeholder="Enter Aadhaar number" id="Aadhaar_no" required>
+  </div>
+  <div class = "form-input">
+    <label for="username">Voter ID:</label>
+    <input type="text" name="Voter_ID" placeholder="Enter Voter ID" id="Voter_ID" required>
+  </div>
+  <div class = "form-input">
+    <label for="username">Email:</label>
+    <input type="text" name="Email" placeholder="Enter Email ID" id="Email" required>
+  </div>
+  <div class = "form-input">
+    <label for="password">Password:</label>
+    <input type="password" name="Password" placeholder="Enter password" id="Password" required>
+  </div>
+  <div class = "form-input">
+    <label for="account_type">Account Type</label>
+    <input type="text" name="account_type" placeholder="Enter account_type" id="account_type" required>
+  </div>
+   <div class = "form-input">
+    <label for="pancard no">Pancard No</label>
+    <input type="text" name="pancard_no" placeholder="Enter pancard no" id="pancard" required>
+  </div>
+  <div class = "form-input">
+    <label for="login">Login ID</label>
+    <input type="text" name="login" placeholder="Enter Login Id" id="pancard" required>
+  </div>
+  <div class="msg">{{ msg }}</div>
+  <input class="button" type="submit" value="Register">
+  </form>
+</div>
+{% endblock %}

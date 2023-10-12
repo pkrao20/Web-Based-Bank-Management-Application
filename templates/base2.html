@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BMS</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+<header id="my-header">
+	<div class = "container">
+		<h1>Bank Management System</h1>
+	</div>
+</header>
+<div class="right">
+	<ul>
+		<li><a href="{{ url_for('adminlogout') }}">Logout</a></li>
+	</ul>
+</div>
+<nav id="navbar">
+<div class="container">
+	<div class="left">
+	<ul>
+		<li><a href="{{url_for('adminhome')}}">Admin Profile</a></li>
+		<li><a href="{{url_for('query1')}}">View details of an account</a></li>
+		<li><a href="{{url_for('query2')}}">Block an account</a></li>
+		<li><a href="{{url_for('query3')}}">List Of accounts</a></li>
+		<li><a href="{{url_for('query4')}}">Verify loan status of customers</a></li>
+		<li><a href="{{url_for('query5')}}">Pending transaction</a></li>
+		<li><a href="{{url_for('query6')}}">Verify Account</a></li>
+	</ul>
+	</div>
+</div>
+</nav>
+<div class ="container">
+	{% block content %}
+	{% endblock %}
+</div>
+<img src="../static/image1.jpg" alt="img" class="center">
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script>
+    $(document).ready(function () {
+      $("#gfg").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#geeks tr").filter(function () {
+          $(this).toggle($(this).text()
+            .toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+</html>

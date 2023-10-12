@@ -1,0 +1,18 @@
+{% extends 'base1.html' %}
+{% block content %}
+<h3>Enter transaction details</h3>
+</div>
+<div class = "container1">
+	<form action="{{ url_for('maketransaction') }}" method="post" class="form-1">
+	<div class = "form-input">
+		<label for="Amount">Amount:</label>
+		<input type="text" name="Amount" placeholder="Enter amount" id="amount" required>
+ 	</div>
+    <div class = "form-input">
+		<label for="ToAccount_ID"> To Account no. :</label>
+		<input type="text" name="ToAccount_ID" placeholder="Enter sending account no." id="toaccountno." required>
+	</div>
+	<div class="msg">{{ msg }}</div>
+	<input class="button" type="submit" value="Submit">
+	</form>
+{% endblock %}

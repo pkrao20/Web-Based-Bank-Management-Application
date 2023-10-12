@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+    <title>nithi</title>
+</head>
+<body>
+    <form  method="POST" action="{{ url_for('submitForm') }}"> <!-- note action -->
+        <select name="select1"> <!-- note the name -->
+            <option value="None">Select Course</option>
+            <option value="CS">Computer Science</option>
+            <option value="Civil">Civil</option>
+            <option value="DS">Data Science</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Chem">Chemical</option>
+            <option value="ME">Mechatronics</option>
+        </select>
+        {{msg}}
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

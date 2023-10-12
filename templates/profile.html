@@ -1,0 +1,13 @@
+{% extends "base1.html" %}
+{% block content %}
+	<h3>Account Details:</h3>
+	<ul>
+		<li>Account Number:{{acc[0] }}</li>
+		<li>Status:{{ acc[1] }}</li>
+		<li>Name:{{ acc[2] }}</li>
+		<li>Balance:{{ acc[3] }}</li>
+		<li>Admin ID:{{ acc[5] }}</li>
+		<li>Phone Number:{{acc[6]}}</li>
+		<li>Address:{{acc[7]}}</li>
+	</ul>
+{% endblock %}

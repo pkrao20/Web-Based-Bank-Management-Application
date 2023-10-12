@@ -1,0 +1,146 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: #3fb0ac;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: 100% 100%;
+    font: italic 15px 'Playfair Display', serif;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+}
+
+.container{
+	width: 90%;
+	margin: auto;
+	overflow: hidden;
+	
+}
+.container1{
+	width: 90%;
+	margin: auto;
+	overflow: hidden;
+	background-color:bisque;
+}
+
+#my-header{
+	background-color: #173e43;
+	color: #fff;
+	padding: 10px 0px;
+}
+
+#navbar{
+	background-color: #ccc;
+	color: #7fd1d4;
+}
+
+.left ul{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.left li{
+	display: inline;
+	padding-right: 20px;
+}
+
+.container h3{
+	margin: 20px 0px;
+}
+
+
+a{
+	text-decoration: none;
+	color: #05386b;
+}
+
+a:hover{
+	color: orange;
+}
+
+a:active{
+	color: crimson;
+}
+
+.button{
+	background-color:#333;
+	color: #fff;
+	padding: 9px 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.button:hover{
+	background-color: royalblue;
+}
+
+.form-1{
+	border: 4px #ccc solid;
+	border-radius: 15px;
+	padding: 10px;}
+
+.form-1 .form-input{
+	padding-bottom: 20px;
+}
+
+
+.form-1 label{
+	display: block;
+}
+
+.form-1 input[type = "text"],.form-1 input[type = "password"]{
+	padding: 8px;
+	width: 90%;
+}
+
+.msg{
+	color: indianred;
+}
+
+.right{
+	font-weight: bold;
+	position: absolute;
+	text-align: right;
+	top: 20px;
+	right: 10px;
+}
+
+.right a{
+	color: #fae596;
+}
+
+.right a:hover{
+	color: orange;
+}
+
+.right a:active{
+	color: crimson;
+}
+
+.right li{
+	display: inline;
+	padding-left: 10px;
+}
+table{
+	text-align: center;
+	width: 100%;
+	margin: 5px;
+}
+
+
+tr,td,th{
+    border: 1px;
+    background-color: #ced4c8ef;
+    text-align: center;
+	border-collapse: collapse;
+}
+img{
+
+	opacity: 0.1;
+}

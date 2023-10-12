@@ -1,0 +1,61 @@
+{% extends "base2.html" %}
+{% block content %}
+<h3 align="center">Check loan status</h3>
+<div class="container1">
+  <form action="{{url_for('query6')}}" method="POST" class="form-1">
+    <div class="form-input">
+      <b>Search Account by entering any unique data related to account like phone no,account no etc:
+        <input id="gfg" type="text" placeholder="Search here">
+      </b>
+      <label for="Account No">Account No</label>
+      <input type=text name="account_no" placeholder="Account no">
+      <input class="button" type="submit" value="Submit">
+    </div>
+    <div class="form-input">
+      <select name="select1"> 
+        <option value="verified">Approve</option>
+        <option value="Reject">Reject</option>
+      </select>
+    </div>
+  </form>
+  <table>
+    <tr>
+      <th>Account no</th>
+      <th>Account Status</th>
+      <th>Account name</th>
+      <th>Balance</th>
+      <th>Intrest rate</th>
+      <th>Admin id</th>
+      <th>phone no</th>
+      <th>address</th>
+      <th>DOB</th>
+      <th>Aadhar</th>
+      <th>Voter Id</th>
+      <th>Email</th>
+      <th>Account Type</th>
+      <th>Pancard</th>
+    </tr>
+    <tbody id="geeks">
+      {% for x in msg %}
+      <tr>
+        <td class="code">{{x.0}}</td>
+        <td class="code">{{x.1}}</td>
+        <td class="code">{{x.2}}</td>
+        <td class="code">{{x.3}}</td>
+        <td class="code">{{x.4}}</td>
+        <td class="code">{{x.5}}</td>
+        <td class="code">{{x.6}}</td>
+        <td class="code">{{x.7}}</td>
+        <td class="code">{{x.8}}</td>
+        <td class="code">{{x.9}}</td>
+        <td class="code">{{x.10}}</td>
+        <td class="code">{{x.11}}</td>
+        <td class="code">{{x.12}}</td>
+        <td class="code">{{x.13}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+{% endblock %}

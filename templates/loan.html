@@ -1,0 +1,21 @@
+{% extends 'base1.html' %}
+{% block content %}
+<div class ="container">
+  <h3>Please enter loan details:</h3>
+</div>
+<div class = "container1">
+  <form action="{{ url_for('loan') }}" method="post" class="form-1">
+  <div class = "form-input">
+    <label for="amount">Loan Amount:</label>
+    <input type="text" name="amount" placeholder="Amount of loan" id="Account_no" required>
+  </div>
+  <div class = "form-input">
+    <label for="period">Period of loan:</label>
+    <input type="text" name="period" placeholder="period of loan" id="Account_name" required>
+  </div>
+  <div class="msg">{{ msg }}</div>
+  <input class="button" type="submit" value="Apply loan">
+  </form>
+  <div  style="padding:10px;"><a  href="{{ url_for('loandetails') }}"><h2> View Loan History</h2></a></div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BMS</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+<header id="my-header">
+	<div class = "container">
+		<h1>Bank Management System</h1>
+	</div>
+</header>
+<div class="right">
+	<ul>
+		<li><a href="{{ url_for('logout') }}">Logout</a></li>
+	</ul>
+</div>
+<nav id="navbar">
+<div class="container">
+	<div class="left">
+	<ul>
+		<li><a href="{{ url_for('profile')}} ">Profile</a></li>
+		<li><a href="{{ url_for('maketransaction') }}">Transfer Money</a></li>
+		<li><a href="{{ url_for('withdraw') }}">Withdraw Money</a></li>
+		<li><a href="{{ url_for('deposit') }}">Deposit Money</a></li>
+		<li><a href="{{ url_for('loan') }}">Apply for loan</a></li>
+		<li><a href="{{ url_for('transaction_history') }}">View Transactions</a></li>
+
+	</ul>
+	</div>
+</div>
+</nav>
+<div class ="container">
+{% block content %}
+{% endblock %}
+</div>
+<img src="../static/image1.jpg" alt="img" class="center">
+</body>
+</html>

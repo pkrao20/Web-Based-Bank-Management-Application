@@ -1,0 +1,19 @@
+{% extends "base2.html" %}
+{% block content %}
+<h3 align="center">List of Accounts</h3>
+<div class="container1">
+    <table>
+      <tr>
+        <th>Account No</th>
+        <th>Name of account Holder</th>
+      </tr>
+      {% for x in msg %}
+      <tr>
+        <td>{{x.0}}</td>
+        <td>{{x.2}}</td>
+      </tr>
+      {% endfor %}
+     
+    </table>
+</div>
+{% endblock %}

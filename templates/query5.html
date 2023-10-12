@@ -1,0 +1,48 @@
+{% extends "base2.html" %}
+{% block content %}
+<h3 align="center">varify Transactions</h3>
+<div class="container1">
+  <form action="{{url_for('query5')}}" method="POST" class="form-1">
+    <div class="form-input">
+      <b>Search the table for Transaction Satus, Transaction id Amount,Date,Account no:
+        <input id="gfg" type="text" placeholder="Search here">
+      </b>
+      <label for="Transaction_id">Transaction Id</label>
+      <input type=text name="transaction_id" placeholder="Transaction id">
+      <div class="form-input">
+        <br>
+        <select name="select1"> 
+          <option value="Approve">Approve</option>
+          <option value="Reject">Reject</option>
+        </select>
+      </div>
+      <input class="button" type="submit" value="Submit">
+    </div>
+  </form>
+  <table>
+    <tr>
+      <th>Transaction Status</th>
+      <th>Amount</th>
+      <th>SendTo</th>
+      <th>Transaction Date</th>
+      <th>Transaction Id</th>
+      <th>Transaction Type</th>
+      <th>SendFrom</th>
+    </tr>
+    <tbody id="geeks">
+      {% for x in msg %}
+      <tr>
+        <td class="code">{{x.0}}</td>
+        <td class="code">{{x.1}}</td>
+        <td class="code">{{x.2}}</td>
+        <td class="code">{{x.3}}</td>
+        <td class="code">{{x.4}}</td>
+        <td class="code">{{x.5}}</td>
+        <td class="code">{{x.6}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+{% endblock %}

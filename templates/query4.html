@@ -1,0 +1,51 @@
+{% extends "base2.html" %}
+{% block content %}
+  <h3 align="center">verify loan application</h3>
+  <div class="container1">
+    <form action ="{{url_for('query4')}}" method="POST" class="form-1">
+      <b>Search Account by interst Rate,Amount,Loan id,account no,loan status,period,request date:
+        <input id="gfg" type="text" placeholder="Search here">
+      </b>
+        <div class="form-input">
+          <label for="Loan_id">Loan id</label>
+          <input type=text name="loan_id" placeholder="loan id">
+        </div>
+        <div class="form-input">
+          <label for="Loan amount">Loan Amount</label>
+          <input type=text name="amount" placeholder="amount">
+        </div>
+        <div class="form-input">
+          <select name="select1"> 
+            <option value="Approve">Approve</option>
+            <option value="Reject">Reject</option>
+          </select>
+        </div>
+        <input class="button" type="submit" value="Submit">
+    </form>
+    <table>
+        <tr>
+            <th>Intrest Rate</th>
+            <th>Amount</th>
+            <th>Loan id</th>
+            <th>account no</th>
+            <th>loan status</th>
+            <th>period</th>
+            <th>request date</th>
+        </tr>
+        <tbody id="geeks">
+        {% for x in msg %}
+            <tr>
+            <td class="code" >{{x.0}}</td>
+            <td class="code" >{{x.1}}</td>
+            <td class="code" >{{x.2}}</td>
+            <td class="code" >{{x.3}}</td>
+            <td class="code" >{{x.4}}</td>
+            <td class="code" >{{x.5}}</td>
+            <td class="code" >{{x.6}}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+  </div>
+{% endblock %}

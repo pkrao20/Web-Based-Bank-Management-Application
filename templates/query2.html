@@ -1,0 +1,14 @@
+{% extends "base2.html" %}
+{% block content %}
+  <h3 align="center">Block Account</h3>
+  <div class="container1">
+    <form action ="{{url_for('query2')}}" method="POST" class="form-1">
+        <div class="form-input">
+          <label for="Account_no">Account number:</label>
+          <input type=text name="Account_no" placeholder="Enter account number">
+        </div>
+        <div class="msg">{{ msg }}</div>
+        <input class="button" type="submit" value="Submit">
+    </form>
+  </div>
+{% endblock %}

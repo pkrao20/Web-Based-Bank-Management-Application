@@ -1,0 +1,29 @@
+{% extends "base1.html" %}
+{% block content %}
+<table>
+    <tr>
+        <th>Loan ID</th>
+        <th>loan status</th>
+        <th>period</th>
+        <th>request date</th>
+        <th>pass date</th>
+        <th>Interest</th>
+        <th>Amount</th>
+        <th>Amount Passed</th>
+    </tr>
+    {% for x in msg %}
+        <tr>
+        <td class="code" >{{x.0}}</td>
+        <td class="code" >{{x.1}}</td>
+        <td class="code" >{{x.2}}</td>
+        <td class="code" >{{x.3}}</td>
+        <td class="code" >{{x.4}}</td>
+        <td class="code" >{{x.5}}</td>
+        <td class="code" >{{x.6}}</td>
+        <td class="code" >{{x.7}}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+</div>
+{% endblock %}
